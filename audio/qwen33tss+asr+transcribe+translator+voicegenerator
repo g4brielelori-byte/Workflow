@@ -1,0 +1,2400 @@
+{
+  "id": "b4bfe81d-78a5-4391-9dc2-679428d546ea",
+  "revision": 0,
+  "last_node_id": 132,
+  "last_link_id": 176,
+  "nodes": [
+    {
+      "id": 129,
+      "type": "LoadImage",
+      "pos": [
+        193.42794457553157,
+        4907.850104908942
+      ],
+      "size": [
+        270,
+        314
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.15.1",
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "text+transcribe+voicegenerator+qwen.png",
+        "image"
+      ]
+    },
+    {
+      "id": 83,
+      "type": "SaveAudio",
+      "pos": [
+        887.4189657964048,
+        3405.8829168831535
+      ],
+      "size": [
+        353.74655983664775,
+        233.76311146129228
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 79
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.15.1",
+        "Node name for S&R": "SaveAudio"
+      },
+      "widgets_values": [
+        "audio/ComfyUI"
+      ]
+    },
+    {
+      "id": 98,
+      "type": "Fast Groups Bypasser (rgthree)",
+      "pos": [
+        -516.4965705237368,
+        3043.0405854335954
+      ],
+      "size": [
+        1103.5161325274676,
+        260.76049012741714
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "OPT_CONNECTION",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "properties": {
+        "matchColors": "",
+        "matchTitle": "",
+        "showNav": true,
+        "showAllGraphs": true,
+        "sort": "position",
+        "customSortAlphabet": "",
+        "toggleRestriction": "default"
+      }
+    },
+    {
+      "id": 89,
+      "type": "LoadAudio",
+      "pos": [
+        -1106.7962622261498,
+        3448.1351433202417
+      ],
+      "size": [
+        270,
+        136
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            97
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.12.0",
+        "Node name for S&R": "LoadAudio"
+      },
+      "widgets_values": [
+        "Registrazione in corso (26).m4a",
+        null,
+        null
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 88,
+      "type": "LoadAudio",
+      "pos": [
+        -1110.6226460627668,
+        3240.7505779523635
+      ],
+      "size": [
+        270,
+        136
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            98
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.12.0",
+        "Node name for S&R": "LoadAudio"
+      },
+      "widgets_values": [
+        "output2.mp3",
+        null,
+        null
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 131,
+      "type": "LoadImage",
+      "pos": [
+        233.60529198947233,
+        3451.475244768104
+      ],
+      "size": [
+        270,
+        314
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.15.1",
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "Immagine 2026-03-09 181326.png",
+        "image"
+      ]
+    },
+    {
+      "id": 62,
+      "type": "4ce86776-e73b-4bbf-aa84-cea273b6667d",
+      "pos": [
+        -500.88816993567474,
+        3402.552004597752
+      ],
+      "size": [
+        1130.1954958034605,
+        1364.6404325019976
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 98
+        },
+        {
+          "name": "ref_audio",
+          "type": "AUDIO",
+          "link": 97
+        },
+        {
+          "label": "Edit Transcribition",
+          "name": "script",
+          "type": "STRING",
+          "widget": {
+            "name": "script"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            79
+          ]
+        }
+      ],
+      "properties": {
+        "proxyWidgets": [
+          [
+            "-1",
+            "model_repo"
+          ],
+          [
+            "-1",
+            "download_source"
+          ],
+          [
+            "-1",
+            "precision"
+          ],
+          [
+            "-1",
+            "attn_mode"
+          ],
+          [
+            "-1",
+            "script"
+          ],
+          [
+            "-1",
+            "system"
+          ],
+          [
+            "-1",
+            "editable_text_widget"
+          ],
+          [
+            "-1",
+            "script_1"
+          ],
+          [
+            "73",
+            "url"
+          ],
+          [
+            "73",
+            "model"
+          ]
+        ],
+        "cnr_id": "comfy-core",
+        "ver": "0.15.1"
+      },
+      "widgets_values": [
+        "Qwen/Qwen3-TTS-12Hz-0.6B-Base",
+        "ModelScope",
+        "bf16",
+        "sdpa",
+        "",
+        "You are an expert Translator in multilanguage\nTranslate the text in Korean",
+        "",
+        ""
+      ]
+    }
+  ],
+  "links": [
+    [
+      79,
+      62,
+      0,
+      83,
+      0,
+      "AUDIO"
+    ],
+    [
+      97,
+      89,
+      0,
+      62,
+      1,
+      "AUDIO"
+    ],
+    [
+      98,
+      88,
+      0,
+      62,
+      0,
+      "AUDIO"
+    ]
+  ],
+  "groups": [],
+  "definitions": {
+    "subgraphs": [
+      {
+        "id": "4ce86776-e73b-4bbf-aa84-cea273b6667d",
+        "version": 1,
+        "state": {
+          "lastGroupId": 6,
+          "lastNodeId": 132,
+          "lastLinkId": 176,
+          "lastRerouteId": 1
+        },
+        "revision": 0,
+        "config": {},
+        "name": "Transcribe and Translation",
+        "inputNode": {
+          "id": -10,
+          "bounding": [
+            -3188.5370076656745,
+            3563.0305030988175,
+            155.76953125,
+            240
+          ]
+        },
+        "outputNode": {
+          "id": -20,
+          "bounding": [
+            733.5177564481947,
+            5136.867128334447,
+            120,
+            60
+          ]
+        },
+        "inputs": [
+          {
+            "id": "ec7ffa7d-f0b6-4a6e-ab98-1729752066a9",
+            "name": "audio",
+            "type": "AUDIO",
+            "linkIds": [
+              100
+            ],
+            "localized_name": "audio",
+            "pos": [
+              -3052.7674764156745,
+              3583.0305030988175
+            ]
+          },
+          {
+            "id": "c13b0d79-1f71-4fdc-bad6-145975832aaa",
+            "name": "ref_audio",
+            "type": "AUDIO",
+            "linkIds": [
+              99
+            ],
+            "localized_name": "ref_audio",
+            "pos": [
+              -3052.7674764156745,
+              3603.0305030988175
+            ]
+          },
+          {
+            "id": "e95de7cd-b059-4609-8300-63008c96eaf5",
+            "name": "model_repo",
+            "type": "COMBO",
+            "linkIds": [
+              82
+            ],
+            "pos": [
+              -3052.7674764156745,
+              3623.0305030988175
+            ]
+          },
+          {
+            "id": "6467dbfd-94fe-4965-934e-ab2b0108813a",
+            "name": "download_source",
+            "type": "COMBO",
+            "linkIds": [
+              83
+            ],
+            "pos": [
+              -3052.7674764156745,
+              3643.0305030988175
+            ]
+          },
+          {
+            "id": "747c12ba-d2cf-455d-ab3e-92e8a34c2782",
+            "name": "precision",
+            "type": "COMBO",
+            "linkIds": [
+              84
+            ],
+            "pos": [
+              -3052.7674764156745,
+              3663.0305030988175
+            ]
+          },
+          {
+            "id": "9493ccdb-f827-45fe-8151-647366676b94",
+            "name": "attn_mode",
+            "type": "COMBO",
+            "linkIds": [
+              85
+            ],
+            "pos": [
+              -3052.7674764156745,
+              3683.0305030988175
+            ]
+          },
+          {
+            "id": "a7ada6dc-3c1d-4345-8704-1f9c24f9dee4",
+            "name": "script",
+            "type": "STRING",
+            "linkIds": [
+              143
+            ],
+            "label": "Edit Transcribition",
+            "pos": [
+              -3052.7674764156745,
+              3703.0305030988175
+            ]
+          },
+          {
+            "id": "874d3522-40e4-44a4-858d-9cd0d4d3ffe8",
+            "name": "system",
+            "type": "STRING",
+            "linkIds": [
+              171
+            ],
+            "pos": [
+              -3052.7674764156745,
+              3723.0305030988175
+            ]
+          },
+          {
+            "id": "5c79c636-f7b6-4dbe-bece-beb0f307dd5b",
+            "name": "editable_text_widget",
+            "type": "STRING",
+            "linkIds": [
+              172
+            ],
+            "pos": [
+              -3052.7674764156745,
+              3743.0305030988175
+            ]
+          },
+          {
+            "id": "2b6e5e50-283d-4fb3-afd0-ae92c19907ee",
+            "name": "script_1",
+            "type": "STRING",
+            "linkIds": [
+              173
+            ],
+            "pos": [
+              -3052.7674764156745,
+              3763.0305030988175
+            ]
+          }
+        ],
+        "outputs": [
+          {
+            "id": "96ee300c-2bda-4db5-9c6f-bb91c105ee4b",
+            "name": "AUDIO",
+            "type": "AUDIO",
+            "linkIds": [
+              119
+            ],
+            "pos": [
+              753.5177564481947,
+              5156.867128334447
+            ]
+          }
+        ],
+        "widgets": [],
+        "nodes": [
+          {
+            "id": 80,
+            "type": "GetNode",
+            "pos": [
+              -2879.6176145226523,
+              4017.928067411917
+            ],
+            "size": [
+              210,
+              58
+            ],
+            "flags": {},
+            "order": 0,
+            "mode": 4,
+            "inputs": [],
+            "outputs": [
+              {
+                "name": "OLLAMA_CONNECTIVITY",
+                "type": "OLLAMA_CONNECTIVITY",
+                "links": [
+                  71
+                ]
+              }
+            ],
+            "title": "Get_connection",
+            "properties": {},
+            "widgets_values": [
+              "connection"
+            ],
+            "color": "#232",
+            "bgcolor": "#353"
+          },
+          {
+            "id": 50,
+            "type": "Qwen3TTSAdvancedDialogue",
+            "pos": [
+              -143.37863715787492,
+              5132.262196378351
+            ],
+            "size": [
+              384.5552734375,
+              374
+            ],
+            "flags": {},
+            "order": 21,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "model_obj",
+                "name": "model_obj",
+                "type": "QWEN3_MODEL",
+                "link": 80
+              },
+              {
+                "localized_name": "texts",
+                "name": "texts",
+                "type": "LIST",
+                "link": 39
+              },
+              {
+                "localized_name": "instructs",
+                "name": "instructs",
+                "type": "LIST",
+                "link": 40
+              },
+              {
+                "localized_name": "roles",
+                "name": "roles",
+                "type": "LIST",
+                "link": 41
+              },
+              {
+                "localized_name": "pauses",
+                "name": "pauses",
+                "type": "LIST",
+                "link": 42
+              },
+              {
+                "localized_name": "role_bank",
+                "name": "role_bank",
+                "type": "QWEN3_ROLE_BANK",
+                "link": 43
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "AUDIO",
+                "name": "AUDIO",
+                "type": "AUDIO",
+                "links": [
+                  118
+                ]
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "Qwen3TTSAdvancedDialogue"
+            },
+            "widgets_values": [
+              228427683629156,
+              "randomize",
+              1792,
+              0.9,
+              1,
+              0,
+              1.05,
+              0.9,
+              1,
+              50
+            ]
+          },
+          {
+            "id": 76,
+            "type": "SetNode",
+            "pos": [
+              2741.6250425574494,
+              2453.6676260831805
+            ],
+            "size": [
+              210,
+              58
+            ],
+            "flags": {},
+            "order": 26,
+            "mode": 0,
+            "inputs": [
+              {
+                "name": "STRING",
+                "type": "STRING",
+                "link": 122
+              }
+            ],
+            "outputs": [
+              {
+                "name": "*",
+                "type": "*",
+                "links": null
+              }
+            ],
+            "title": "Set_Prompt",
+            "properties": {
+              "previousName": ""
+            },
+            "widgets_values": [
+              "Prompt"
+            ]
+          },
+          {
+            "id": 70,
+            "type": "GetNode",
+            "pos": [
+              -2867.6539954031273,
+              4273.764377763855
+            ],
+            "size": [
+              210,
+              58
+            ],
+            "flags": {},
+            "order": 1,
+            "mode": 4,
+            "inputs": [],
+            "outputs": [
+              {
+                "name": "STRING",
+                "type": "STRING",
+                "links": [
+                  72,
+                  152
+                ]
+              }
+            ],
+            "title": "Get_Prompt",
+            "properties": {},
+            "widgets_values": [
+              "Prompt"
+            ]
+          },
+          {
+            "id": 85,
+            "type": "GetNode",
+            "pos": [
+              -3127.798478150429,
+              5083.336520962951
+            ],
+            "size": [
+              210,
+              60
+            ],
+            "flags": {},
+            "order": 2,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+              {
+                "name": "QWEN3_MODEL",
+                "type": "QWEN3_MODEL",
+                "links": []
+              }
+            ],
+            "title": "Get_model",
+            "properties": {},
+            "widgets_values": [
+              "model"
+            ]
+          },
+          {
+            "id": 46,
+            "type": "Qwen3TTSSenseVoiceASR",
+            "pos": [
+              -3172.380105597489,
+              5355.260507607724
+            ],
+            "size": [
+              381.9989298796173,
+              112.06675842285131
+            ],
+            "flags": {},
+            "order": 14,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "audio",
+                "name": "audio",
+                "type": "AUDIO",
+                "link": 102
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "text",
+                "name": "text",
+                "type": "STRING",
+                "links": [
+                  33
+                ]
+              },
+              {
+                "localized_name": "suggested_instruct",
+                "name": "suggested_instruct",
+                "type": "STRING",
+                "links": null
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "Qwen3TTSSenseVoiceASR"
+            },
+            "widgets_values": [
+              "iic/SenseVoiceSmall",
+              "auto"
+            ]
+          },
+          {
+            "id": 49,
+            "type": "Qwen3TTSRoleBank",
+            "pos": [
+              -1628.8524537201206,
+              5259.95989936624
+            ],
+            "size": [
+              272.1177734375,
+              166
+            ],
+            "flags": {},
+            "order": 20,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "prev_role_bank",
+                "name": "prev_role_bank",
+                "shape": 7,
+                "type": "QWEN3_ROLE_BANK",
+                "link": null
+              },
+              {
+                "localized_name": "prompt_1",
+                "name": "prompt_1",
+                "shape": 7,
+                "type": "QWEN3_PROMPT",
+                "link": 37
+              },
+              {
+                "localized_name": "prompt_2",
+                "name": "prompt_2",
+                "shape": 7,
+                "type": "QWEN3_PROMPT",
+                "link": null
+              },
+              {
+                "localized_name": "prompt_3",
+                "name": "prompt_3",
+                "shape": 7,
+                "type": "QWEN3_PROMPT",
+                "link": null
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "role_bank",
+                "name": "role_bank",
+                "type": "QWEN3_ROLE_BANK",
+                "links": [
+                  43
+                ]
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "Qwen3TTSRoleBank"
+            },
+            "widgets_values": [
+              "Role1",
+              "Role2",
+              "Role3"
+            ]
+          },
+          {
+            "id": 103,
+            "type": "easy cleanGpuUsed",
+            "pos": [
+              353.4667284290264,
+              5146.412842326584
+            ],
+            "size": [
+              161.3404296875,
+              26
+            ],
+            "flags": {},
+            "order": 29,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "anything",
+                "name": "anything",
+                "type": "*",
+                "link": 118
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "output",
+                "name": "output",
+                "type": "*",
+                "links": [
+                  119
+                ]
+              }
+            ],
+            "properties": {
+              "cnr_id": "comfyui-easy-use",
+              "ver": "1.3.6",
+              "Node name for S&R": "easy cleanGpuUsed"
+            },
+            "widgets_values": []
+          },
+          {
+            "id": 77,
+            "type": "ShowText|pysssss",
+            "pos": [
+              -735.089830848254,
+              2456.7695850076607
+            ],
+            "size": [
+              713.3680095221036,
+              812.8758855817001
+            ],
+            "flags": {},
+            "order": 15,
+            "mode": 4,
+            "inputs": [
+              {
+                "localized_name": "text",
+                "name": "text",
+                "type": "STRING",
+                "link": 70
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "STRING",
+                "name": "STRING",
+                "shape": 6,
+                "type": "STRING",
+                "links": [
+                  129
+                ]
+              }
+            ],
+            "properties": {
+              "cnr_id": "comfyui-custom-scripts",
+              "ver": "1.2.5",
+              "Node name for S&R": "ShowText|pysssss"
+            },
+            "widgets_values": [
+              "Hello everyone. I'm Gabrielel Lori and I have been working in the film and television industry for more than 10 years as a compositing artist primarily using nuke as my main tool and a variety of other software depending on the period the project and my skill set in recent years as anyone in the field nodes we have gone through or are currently going through a major crisis with many large and small studios going bankrupt or folding overnight the rise of AI has added even more confusion and anxiety to our lives into the industry in which I work because of this and because I love technology I decided to focus my attention and energy on steady and comp Ui and everything that around it and to embrace change instead of hearing it Consider the tutorials as coming from someone with a short memory who has to look at their notes to remember what they have done So let's start with this first simple tutorial that helped me achieve a good level of realism which I wanted to share with you as you can see this is an image of a girl depicted in wrong near the lake and Vla orge it was generated locally does creating a realistic image without having to spend credits or subscribe to powerful platform such as nanoban or G which are increasingly subject to copyright restrictions or censorship and are often limiting when producing a film in this workflow to improve realism and use a base on which to work in postproduct. I also used seed Vr2 upscalear and face detail. the workflow reads from left to right and is based on a standard Z image workflow to one for Bs clip Z image tuurbo B16 as theusion model and they is Eae. I used the get node and set node of the custom node Kj to make the workflow easier to read In short, you can connect the set node to a specific one and then call it up with the get node in order to minimize confusion between the connections and eliminate the possibility of creating a spider tree that would make everything visually much more confusion the prompt is the part I worked on the most I used all as a model Gptos220 so that I could always work locally and make countless versions until I got the one I wanted the prompt was divided into categories. a summary of the scene and a series of specifications such as the camera blur historical period main subject acting and description of the location. what I can share is that the rendering is very good but adherence to the prompt is not the best I haven't tested it yet to make it realistic but it would seem that Z image base has the skill at the expense of realism. so depending on the project you need to do keep that in mind furthermore during my research I came across this wonderful custom node called Z image power nodes. the creator of this custom node ran a series of benchmarks in order to optimize the parameters behind it and make processing as simple and efficient as possible as you can see there are a number of presets that I recommend you try initially so that you can test them and choose the one you prefer I then used seed upscaler to increase the detail. after a series of tests in my case the parameters found effectively detail the image showing arts on the face I solved this by using face theer trying to make the face more pleasing with a more striking expression to see the before and after I use image comparer between the various stages of the base render of Z image turbo seed upscaler and face to tailer as you can see within this workflow.In face detailer. I took particular care not to push the parameters too far in order to make the face as natural as possible making small but substantial improvements by working on the de noise sampler and parameter.It is worth noting the use of the Bboque collector in the Sam model Yolo face to limit the processing area to the face only helping to define the girls features this precautions in addition to those mentioned above make thespec and accurate with this image as a base. I moved on to the next step. the upscaler. at the moment after various tests including withfui I have not found an upscaler that can compare to topaz for this reason I decided to use it for both the upscaler and face recovery. this is necessary because as happened with confui where the increase detail led to artacts on the face the same thing happen with topazaz I suggest you test the parameters here to and make more adjustments using both realistic and creative modes the improvement in detail must always be measure to avoid it becoming too accentuated which could ruin all the good work done previously you have to think of it as if it wear a real photo very often photos taken in these conditions have imperfections that make the image real for this reason the final tool I use is nuke this case I made a small color by opening up the blacks slightly reducing the contrast of the image and increase the de focus where necessary adding a little eye to give it a more artistic look than the parametrically perfect look that an ai image of this type normally has I also use the paint nodes to remove some artifactacts that could reveal the artificial nature of the subject to the naked eye and grain at the end of it all. the node used the new car standard ones but feel free to use a production workflow by first dennoing the image and then relying the grain at the end of it all using an everygra or the as grain node at the end of it all, I prefer to apply a very slight general blur to make the image details less sharp thus replicating the rendering of a medium quality smartphonephone. Finally, I added a little grain to spoil image a little more using one of the presets in the grain node in nuke last but not least I would like to say the following when generating image with artificial today it is essential to be aware of the regulatory framework in by the Eu ai act the regulation approved by the European union that is gradually coming into force and should be a around a 2026. the law requires that Ai generated content especially a realistic or potentially misleading be clearly identifiable including through metadata and watermarks. the aim is to ensure transparency traceability and protection for end users the removal or deliberate circumvention of these systems can result in significant financial penalties. which in the most serious cases can run into millions of euros that's why I chose to use numici which correctly integrate watermarks and metadata in accordance with the requirements of the regulation as well as allowing me to optimally organize my workflows as you can see with the ability to customize my export according to my needs and requirements. I would like to thank casey fromneummanon for allowing me to try out their platform. the free plan is currently free of charge so I recommend you test it out and let me know what you think all this allows me to work and a creative and commercial environment while reducing legal risk. being compliant today is not a limit on creativity but a guarantee of professionalism. this is my first tutorial but there will be more and I hope you enjoy them please feel free to write to me or comment with any positive or negative feedback for example, if anyone knows how to replicate the quality of topaz with confui please do not hesitate to write to me and I will research it so that I can create a new tutorial using it on new project. if you've made it this far thank you for your attention. I suggest you subscribe to my channel or wwwwg Gabrielel lori co for more information about me Thank you for your patience and I wish you all the best see in the next tutorial."
+            ],
+            "color": "#323",
+            "bgcolor": "#535"
+          },
+          {
+            "id": 91,
+            "type": "SetNode",
+            "pos": [
+              -3121.377411142307,
+              2748.2058473025595
+            ],
+            "size": [
+              210,
+              58
+            ],
+            "flags": {},
+            "order": 28,
+            "mode": 0,
+            "inputs": [
+              {
+                "name": "AUDIO",
+                "type": "AUDIO",
+                "link": 99
+              }
+            ],
+            "outputs": [
+              {
+                "name": "*",
+                "type": "*",
+                "links": []
+              }
+            ],
+            "title": "Set_ref_audio",
+            "properties": {
+              "previousName": "ref_audio"
+            },
+            "widgets_values": [
+              "ref_audio"
+            ]
+          },
+          {
+            "id": 66,
+            "type": "SetNode",
+            "pos": [
+              -3487.7289510732467,
+              2753.1824427365395
+            ],
+            "size": [
+              210,
+              58
+            ],
+            "flags": {},
+            "order": 24,
+            "mode": 0,
+            "inputs": [
+              {
+                "name": "AUDIO",
+                "type": "AUDIO",
+                "link": 100
+              }
+            ],
+            "outputs": [
+              {
+                "name": "*",
+                "type": "*",
+                "links": null
+              }
+            ],
+            "title": "Set_audio",
+            "properties": {
+              "previousName": ""
+            },
+            "widgets_values": [
+              "audio"
+            ]
+          },
+          {
+            "id": 63,
+            "type": "SetNode",
+            "pos": [
+              -2491.1635148816326,
+              2735.2406892217073
+            ],
+            "size": [
+              210,
+              58
+            ],
+            "flags": {},
+            "order": 23,
+            "mode": 0,
+            "inputs": [
+              {
+                "name": "QWEN3_MODEL",
+                "type": "QWEN3_MODEL",
+                "link": 86
+              }
+            ],
+            "outputs": [
+              {
+                "name": "*",
+                "type": "*",
+                "links": null
+              }
+            ],
+            "title": "Set_model",
+            "properties": {
+              "previousName": ""
+            },
+            "widgets_values": [
+              "model"
+            ]
+          },
+          {
+            "id": 75,
+            "type": "SetNode",
+            "pos": [
+              -3108.843324014287,
+              2472.5711803662734
+            ],
+            "size": [
+              210,
+              58
+            ],
+            "flags": {},
+            "order": 12,
+            "mode": 0,
+            "inputs": [
+              {
+                "name": "OLLAMA_CONNECTIVITY",
+                "type": "OLLAMA_CONNECTIVITY",
+                "link": 68
+              }
+            ],
+            "outputs": [
+              {
+                "name": "*",
+                "type": "*",
+                "links": []
+              }
+            ],
+            "title": "Set_connection",
+            "properties": {
+              "previousName": ""
+            },
+            "widgets_values": [
+              "connection"
+            ]
+          },
+          {
+            "id": 73,
+            "type": "OllamaConnectivityV2",
+            "pos": [
+              -3499.93303196285,
+              2470.0683383662927
+            ],
+            "size": [
+              270,
+              154
+            ],
+            "flags": {},
+            "order": 3,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+              {
+                "localized_name": "connection",
+                "name": "connection",
+                "type": "OLLAMA_CONNECTIVITY",
+                "links": [
+                  68
+                ]
+              }
+            ],
+            "properties": {
+              "cnr_id": "comfyui-ollama",
+              "ver": "2.1.0",
+              "Node name for S&R": "OllamaConnectivityV2"
+            },
+            "widgets_values": [
+              "http://127.0.0.1:11434",
+              "TranslateGemma:latest",
+              5,
+              "minutes",
+              null
+            ],
+            "color": "#232",
+            "bgcolor": "#353"
+          },
+          {
+            "id": 74,
+            "type": "GetNode",
+            "pos": [
+              -1536.1030366043146,
+              2457.8485558407388
+            ],
+            "size": [
+              210,
+              58
+            ],
+            "flags": {},
+            "order": 4,
+            "mode": 4,
+            "inputs": [],
+            "outputs": [
+              {
+                "name": "AUDIO",
+                "type": "AUDIO",
+                "links": [
+                  63
+                ]
+              }
+            ],
+            "title": "Get_audio",
+            "properties": {},
+            "widgets_values": [
+              "audio"
+            ],
+            "color": "#322",
+            "bgcolor": "#533"
+          },
+          {
+            "id": 64,
+            "type": "Qwen3TTSSenseVoiceASR",
+            "pos": [
+              -1205.8257186723338,
+              2462.5758313758056
+            ],
+            "size": [
+              378.3322251677033,
+              126
+            ],
+            "flags": {},
+            "order": 13,
+            "mode": 4,
+            "inputs": [
+              {
+                "localized_name": "audio",
+                "name": "audio",
+                "type": "AUDIO",
+                "link": 63
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "text",
+                "name": "text",
+                "type": "STRING",
+                "links": [
+                  70
+                ]
+              },
+              {
+                "localized_name": "suggested_instruct",
+                "name": "suggested_instruct",
+                "type": "STRING",
+                "links": null
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "Qwen3TTSSenseVoiceASR"
+            },
+            "widgets_values": [
+              "iic/SenseVoiceSmall",
+              "en"
+            ],
+            "color": "#323",
+            "bgcolor": "#535"
+          },
+          {
+            "id": 107,
+            "type": "SaveText|pysssss",
+            "pos": [
+              233.40912603527525,
+              2457.2196753433254
+            ],
+            "size": [
+              270,
+              130
+            ],
+            "flags": {},
+            "order": 17,
+            "mode": 4,
+            "inputs": [
+              {
+                "localized_name": "text",
+                "name": "text",
+                "type": "STRING",
+                "link": 129
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "STRING",
+                "name": "STRING",
+                "type": "STRING",
+                "links": null
+              }
+            ],
+            "properties": {
+              "cnr_id": "comfyui-custom-scripts",
+              "ver": "1.2.5",
+              "Node name for S&R": "SaveText|pysssss"
+            },
+            "widgets_values": [
+              "output",
+              "transcrition.txt",
+              "overwrite",
+              true
+            ]
+          },
+          {
+            "id": 119,
+            "type": "LoadText|pysssss",
+            "pos": [
+              1311.0484218869888,
+              2462.907341627385
+            ],
+            "size": [
+              270,
+              82
+            ],
+            "flags": {},
+            "order": 5,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+              {
+                "localized_name": "STRING",
+                "name": "STRING",
+                "type": "STRING",
+                "links": [
+                  174
+                ]
+              }
+            ],
+            "properties": {
+              "cnr_id": "comfyui-custom-scripts",
+              "ver": "1.2.5",
+              "Node name for S&R": "LoadText|pysssss"
+            },
+            "widgets_values": [
+              "output",
+              "transcrition.txt"
+            ]
+          },
+          {
+            "id": 105,
+            "type": "CatchEditTextNode",
+            "pos": [
+              1825.480222610374,
+              2453.0970582703803
+            ],
+            "size": [
+              606.6404879163451,
+              460.0635005997874
+            ],
+            "flags": {},
+            "order": 30,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "input_text",
+                "name": "input_text",
+                "shape": 7,
+                "type": "STRING",
+                "link": 174
+              },
+              {
+                "localized_name": "editable_text_widget",
+                "name": "editable_text_widget",
+                "type": "STRING",
+                "widget": {
+                  "name": "editable_text_widget"
+                },
+                "link": 143
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "STRING",
+                "name": "STRING",
+                "type": "STRING",
+                "links": [
+                  122
+                ]
+              }
+            ],
+            "title": "Edit Translation",
+            "properties": {
+              "cnr_id": "comfyui-imgnr-utils",
+              "ver": "3.3.1",
+              "Node name for S&R": "CatchEditTextNode"
+            },
+            "widgets_values": [
+              "",
+              "use_input",
+              true
+            ],
+            "color": "#2d4a2d"
+          },
+          {
+            "id": 78,
+            "type": "OllamaChat",
+            "pos": [
+              -2453.2841535446105,
+              4054.357398088782
+            ],
+            "size": [
+              435.0724962071863,
+              405.98588247664566
+            ],
+            "flags": {},
+            "order": 27,
+            "mode": 4,
+            "inputs": [
+              {
+                "localized_name": "connectivity",
+                "name": "connectivity",
+                "shape": 7,
+                "type": "OLLAMA_CONNECTIVITY",
+                "link": 71
+              },
+              {
+                "localized_name": "options",
+                "name": "options",
+                "shape": 7,
+                "type": "OLLAMA_OPTIONS",
+                "link": null
+              },
+              {
+                "localized_name": "images",
+                "name": "images",
+                "shape": 7,
+                "type": "IMAGE",
+                "link": null
+              },
+              {
+                "localized_name": "meta",
+                "name": "meta",
+                "shape": 7,
+                "type": "OLLAMA_META",
+                "link": null
+              },
+              {
+                "localized_name": "history",
+                "name": "history",
+                "shape": 7,
+                "type": "OLLAMA_HISTORY",
+                "link": null
+              },
+              {
+                "localized_name": "system",
+                "name": "system",
+                "type": "STRING",
+                "widget": {
+                  "name": "system"
+                },
+                "link": 171
+              },
+              {
+                "localized_name": "prompt",
+                "name": "prompt",
+                "type": "STRING",
+                "widget": {
+                  "name": "prompt"
+                },
+                "link": 152
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "result",
+                "name": "result",
+                "type": "STRING",
+                "links": [
+                  65,
+                  163
+                ]
+              },
+              {
+                "localized_name": "thinking",
+                "name": "thinking",
+                "type": "STRING",
+                "links": null
+              },
+              {
+                "localized_name": "meta",
+                "name": "meta",
+                "type": "OLLAMA_META",
+                "links": null
+              },
+              {
+                "localized_name": "history",
+                "name": "history",
+                "type": "OLLAMA_HISTORY",
+                "links": null
+              }
+            ],
+            "properties": {
+              "cnr_id": "comfyui-ollama",
+              "ver": "2.1.0",
+              "Node name for S&R": "OllamaChat"
+            },
+            "widgets_values": [
+              "You are an expert Translator in multilanguage\nTranslate the text in Korean",
+              "",
+              true,
+              "text",
+              false
+            ],
+            "color": "#432",
+            "bgcolor": "#653"
+          },
+          {
+            "id": 92,
+            "type": "GetNode",
+            "pos": [
+              -3481.2669407844437,
+              5366.494309629205
+            ],
+            "size": [
+              210,
+              60
+            ],
+            "flags": {},
+            "order": 6,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+              {
+                "name": "AUDIO",
+                "type": "AUDIO",
+                "links": [
+                  102
+                ]
+              }
+            ],
+            "title": "Get_audio",
+            "properties": {},
+            "widgets_values": [
+              "audio"
+            ]
+          },
+          {
+            "id": 93,
+            "type": "GetNode",
+            "pos": [
+              -3110.1278632946883,
+              5197.190919249175
+            ],
+            "size": [
+              210,
+              60
+            ],
+            "flags": {},
+            "order": 7,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+              {
+                "name": "AUDIO",
+                "type": "AUDIO",
+                "links": [
+                  103
+                ]
+              }
+            ],
+            "title": "Get_ref_audio",
+            "properties": {},
+            "widgets_values": [
+              "ref_audio"
+            ],
+            "color": "#322",
+            "bgcolor": "#533"
+          },
+          {
+            "id": 104,
+            "type": "Qwen3TTSPromptManager",
+            "pos": [
+              -2111.4221218145103,
+              5071.8832723339265
+            ],
+            "size": [
+              332.00390625,
+              106
+            ],
+            "flags": {},
+            "order": 19,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "voice_clone_prompt",
+                "name": "voice_clone_prompt",
+                "shape": 7,
+                "type": "QWEN3_PROMPT",
+                "link": 120
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "voice_clone_prompt",
+                "name": "voice_clone_prompt",
+                "type": "QWEN3_PROMPT",
+                "links": []
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "Qwen3TTSPromptManager"
+            },
+            "widgets_values": [
+              "Save",
+              "gabriele",
+              "gabriele.qwen3tts"
+            ]
+          },
+          {
+            "id": 84,
+            "type": "GetNode",
+            "pos": [
+              -432.3576812678036,
+              5053.4015668127495
+            ],
+            "size": [
+              210,
+              60
+            ],
+            "flags": {},
+            "order": 8,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+              {
+                "name": "QWEN3_MODEL",
+                "type": "QWEN3_MODEL",
+                "links": [
+                  80
+                ]
+              }
+            ],
+            "title": "Get_model",
+            "properties": {},
+            "widgets_values": [
+              "model"
+            ]
+          },
+          {
+            "id": 68,
+            "type": "Qwen3TTSLoader",
+            "pos": [
+              -2800.34596355375,
+              2731.7218344857065
+            ],
+            "size": [
+              248.46193048820123,
+              180.3287210473178
+            ],
+            "flags": {},
+            "order": 25,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "model_repo",
+                "name": "model_repo",
+                "type": "COMBO",
+                "widget": {
+                  "name": "model_repo"
+                },
+                "link": 82
+              },
+              {
+                "localized_name": "download_source",
+                "name": "download_source",
+                "type": "COMBO",
+                "widget": {
+                  "name": "download_source"
+                },
+                "link": 83
+              },
+              {
+                "localized_name": "precision",
+                "name": "precision",
+                "type": "COMBO",
+                "widget": {
+                  "name": "precision"
+                },
+                "link": 84
+              },
+              {
+                "localized_name": "attn_mode",
+                "name": "attn_mode",
+                "type": "COMBO",
+                "widget": {
+                  "name": "attn_mode"
+                },
+                "link": 85
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "model_obj",
+                "name": "model_obj",
+                "type": "QWEN3_MODEL",
+                "links": [
+                  86
+                ]
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "Qwen3TTSLoader"
+            },
+            "widgets_values": [
+              "Qwen/Qwen3-TTS-12Hz-0.6B-Base",
+              "ModelScope",
+              "bf16",
+              "sdpa",
+              true
+            ],
+            "color": "#223",
+            "bgcolor": "#335"
+          },
+          {
+            "id": 120,
+            "type": "Qwen3TTSLoader",
+            "pos": [
+              -3456.815831093548,
+              5140.881383395884
+            ],
+            "size": [
+              248.46193048820123,
+              180.3287210473178
+            ],
+            "flags": {},
+            "order": 9,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+              {
+                "localized_name": "model_obj",
+                "name": "model_obj",
+                "type": "QWEN3_MODEL",
+                "links": [
+                  175
+                ]
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "Qwen3TTSLoader"
+            },
+            "widgets_values": [
+              "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+              "ModelScope",
+              "bf16",
+              "sdpa",
+              true
+            ],
+            "color": "#223",
+            "bgcolor": "#335"
+          },
+          {
+            "id": 115,
+            "type": "CatchEditTextNode",
+            "pos": [
+              -1407.30151562683,
+              3390.4890227369324
+            ],
+            "size": [
+              606.6404879163451,
+              460.0635005997874
+            ],
+            "flags": {},
+            "order": 31,
+            "mode": 4,
+            "inputs": [
+              {
+                "localized_name": "input_text",
+                "name": "input_text",
+                "shape": 7,
+                "type": "STRING",
+                "link": 163
+              },
+              {
+                "localized_name": "editable_text_widget",
+                "name": "editable_text_widget",
+                "type": "STRING",
+                "widget": {
+                  "name": "editable_text_widget"
+                },
+                "link": 172
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "STRING",
+                "name": "STRING",
+                "type": "STRING",
+                "links": [
+                  159
+                ]
+              }
+            ],
+            "title": "Edit Translation",
+            "properties": {
+              "cnr_id": "comfyui-imgnr-utils",
+              "ver": "3.3.1",
+              "Node name for S&R": "CatchEditTextNode"
+            },
+            "widgets_values": [
+              "",
+              "use_input",
+              true
+            ],
+            "color": "#2d4a2d"
+          },
+          {
+            "id": 43,
+            "type": "Qwen3TTSVoiceClonePrompt",
+            "pos": [
+              -2704.0148953481657,
+              5147.485926227137
+            ],
+            "size": [
+              400,
+              200
+            ],
+            "flags": {},
+            "order": 16,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "model_obj",
+                "name": "model_obj",
+                "type": "QWEN3_MODEL",
+                "link": 175
+              },
+              {
+                "localized_name": "ref_audio",
+                "name": "ref_audio",
+                "type": "AUDIO",
+                "link": 103
+              },
+              {
+                "localized_name": "ref_text",
+                "name": "ref_text",
+                "shape": 7,
+                "type": "STRING",
+                "widget": {
+                  "name": "ref_text"
+                },
+                "link": 33
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "voice_clone_prompt",
+                "name": "voice_clone_prompt",
+                "type": "QWEN3_PROMPT",
+                "links": [
+                  36,
+                  120
+                ]
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "Qwen3TTSVoiceClonePrompt"
+            },
+            "widgets_values": [
+              true,
+              ""
+            ]
+          },
+          {
+            "id": 126,
+            "type": "Qwen3TTSScriptProcessor",
+            "pos": [
+              -531.0655347189628,
+              5744.90598671422
+            ],
+            "size": [
+              687.856157329544,
+              445.8908941191893
+            ],
+            "flags": {
+              "collapsed": false
+            },
+            "order": 10,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+              {
+                "localized_name": "texts",
+                "name": "texts",
+                "type": "LIST",
+                "links": []
+              },
+              {
+                "localized_name": "instructs",
+                "name": "instructs",
+                "type": "LIST",
+                "links": []
+              },
+              {
+                "localized_name": "roles",
+                "name": "roles",
+                "type": "LIST",
+                "links": []
+              },
+              {
+                "localized_name": "pauses",
+                "name": "pauses",
+                "type": "LIST",
+                "links": []
+              }
+            ],
+            "title": "Text",
+            "properties": {
+              "Node name for S&R": "Qwen3TTSScriptProcessor"
+            },
+            "widgets_values": [
+              "[sarcastic]Adesso incollo il testo, così ho la possibilità di aggiungere autonomamente gli stati d'animo durante la generazione della voce. Arrivati a questo punto possiamo iniziare a generare la mia voce e fare un ultimo recap di quello che abbiamo visto. Controllate sempre che le aree siano attivate nel modo corretto ed andiamo a vedere l'ultima parte del workflow che sarebbe quella appunto del sistema per crare la mia voce. ",
+              "tutorial01"
+            ]
+          },
+          {
+            "id": 127,
+            "type": "FB_Qwen3TTSRoleBank",
+            "pos": [
+              -1301.7535917686112,
+              5780.763366564642
+            ],
+            "size": [
+              270,
+              366
+            ],
+            "flags": {},
+            "order": 11,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "prompt_1",
+                "name": "prompt_1",
+                "shape": 7,
+                "type": "VOICE_CLONE_PROMPT",
+                "link": null
+              },
+              {
+                "localized_name": "prompt_2",
+                "name": "prompt_2",
+                "shape": 7,
+                "type": "VOICE_CLONE_PROMPT",
+                "link": null
+              },
+              {
+                "localized_name": "prompt_3",
+                "name": "prompt_3",
+                "shape": 7,
+                "type": "VOICE_CLONE_PROMPT",
+                "link": null
+              },
+              {
+                "localized_name": "prompt_4",
+                "name": "prompt_4",
+                "shape": 7,
+                "type": "VOICE_CLONE_PROMPT",
+                "link": null
+              },
+              {
+                "localized_name": "prompt_5",
+                "name": "prompt_5",
+                "shape": 7,
+                "type": "VOICE_CLONE_PROMPT",
+                "link": null
+              },
+              {
+                "localized_name": "prompt_6",
+                "name": "prompt_6",
+                "shape": 7,
+                "type": "VOICE_CLONE_PROMPT",
+                "link": null
+              },
+              {
+                "localized_name": "prompt_7",
+                "name": "prompt_7",
+                "shape": 7,
+                "type": "VOICE_CLONE_PROMPT",
+                "link": null
+              },
+              {
+                "localized_name": "prompt_8",
+                "name": "prompt_8",
+                "shape": 7,
+                "type": "VOICE_CLONE_PROMPT",
+                "link": null
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "role_bank",
+                "name": "role_bank",
+                "type": "QWEN3_ROLE_BANK",
+                "links": null
+              }
+            ],
+            "properties": {
+              "cnr_id": "qwen3-tts-comfyui",
+              "ver": "1.0.6",
+              "Node name for S&R": "FB_Qwen3TTSRoleBank"
+            },
+            "widgets_values": [
+              "Role1",
+              "Role2",
+              "Role3",
+              "Role4",
+              "Role5",
+              "Role6",
+              "Role7",
+              "Role8"
+            ]
+          },
+          {
+            "id": 48,
+            "type": "Qwen3TTSPromptManager",
+            "pos": [
+              -2085.481360006517,
+              5285.231110773493
+            ],
+            "size": [
+              332.00390625,
+              106
+            ],
+            "flags": {},
+            "order": 18,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "voice_clone_prompt",
+                "name": "voice_clone_prompt",
+                "shape": 7,
+                "type": "QWEN3_PROMPT",
+                "link": 36
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "voice_clone_prompt",
+                "name": "voice_clone_prompt",
+                "type": "QWEN3_PROMPT",
+                "links": [
+                  37
+                ]
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "Qwen3TTSPromptManager"
+            },
+            "widgets_values": [
+              "Load",
+              "gabriele",
+              "gabriele.qwen3tts"
+            ]
+          },
+          {
+            "id": 52,
+            "type": "Qwen3TTSScriptProcessor",
+            "pos": [
+              -1210.5721907789818,
+              5136.207576043504
+            ],
+            "size": [
+              687.856157329544,
+              445.8908941191893
+            ],
+            "flags": {
+              "collapsed": false
+            },
+            "order": 22,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "script",
+                "name": "script",
+                "type": "STRING",
+                "widget": {
+                  "name": "script"
+                },
+                "link": 173
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "texts",
+                "name": "texts",
+                "type": "LIST",
+                "links": [
+                  39
+                ]
+              },
+              {
+                "localized_name": "instructs",
+                "name": "instructs",
+                "type": "LIST",
+                "links": [
+                  40
+                ]
+              },
+              {
+                "localized_name": "roles",
+                "name": "roles",
+                "type": "LIST",
+                "links": [
+                  41
+                ]
+              },
+              {
+                "localized_name": "pauses",
+                "name": "pauses",
+                "type": "LIST",
+                "links": [
+                  42
+                ]
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "Qwen3TTSScriptProcessor"
+            },
+            "widgets_values": [
+              "",
+              "tutorial01"
+            ]
+          }
+        ],
+        "groups": [
+          {
+            "id": 3,
+            "title": "ASSET",
+            "bounding": [
+              -3991.973948128786,
+              2333.0326646745725,
+              2131.226587873886,
+              722.7778011698065
+            ],
+            "color": "#444",
+            "font_size": 24,
+            "flags": {}
+          },
+          {
+            "id": 4,
+            "title": "TRANSCRIBE TEXT",
+            "bounding": [
+              -1695.4231267914,
+              2310.2733149734568,
+              2987.03060711502,
+              1070.257615199684
+            ],
+            "font_size": 24,
+            "flags": {}
+          },
+          {
+            "id": 5,
+            "title": "Translation",
+            "bounding": [
+              -2889.6176145226523,
+              3902.1485722415937,
+              2609.8449445537635,
+              647.0161518444426
+            ],
+            "font_size": 24,
+            "flags": {}
+          },
+          {
+            "id": 6,
+            "title": "Voice Simulator",
+            "bounding": [
+              -3651.72489522364,
+              4970.140955165198,
+              4211.842203742837,
+              636.4777712206924
+            ],
+            "color": "#3f789e",
+            "font_size": 24,
+            "flags": {}
+          }
+        ],
+        "links": [
+          {
+            "id": 39,
+            "origin_id": 52,
+            "origin_slot": 0,
+            "target_id": 50,
+            "target_slot": 1,
+            "type": "LIST"
+          },
+          {
+            "id": 40,
+            "origin_id": 52,
+            "origin_slot": 1,
+            "target_id": 50,
+            "target_slot": 2,
+            "type": "LIST"
+          },
+          {
+            "id": 41,
+            "origin_id": 52,
+            "origin_slot": 2,
+            "target_id": 50,
+            "target_slot": 3,
+            "type": "LIST"
+          },
+          {
+            "id": 42,
+            "origin_id": 52,
+            "origin_slot": 3,
+            "target_id": 50,
+            "target_slot": 4,
+            "type": "LIST"
+          },
+          {
+            "id": 43,
+            "origin_id": 49,
+            "origin_slot": 0,
+            "target_id": 50,
+            "target_slot": 5,
+            "type": "QWEN3_ROLE_BANK"
+          },
+          {
+            "id": 33,
+            "origin_id": 46,
+            "origin_slot": 0,
+            "target_id": 43,
+            "target_slot": 2,
+            "type": "STRING"
+          },
+          {
+            "id": 37,
+            "origin_id": 48,
+            "origin_slot": 0,
+            "target_id": 49,
+            "target_slot": 1,
+            "type": "QWEN3_PROMPT"
+          },
+          {
+            "id": 36,
+            "origin_id": 43,
+            "origin_slot": 0,
+            "target_id": 48,
+            "target_slot": 0,
+            "type": "QWEN3_PROMPT"
+          },
+          {
+            "id": 63,
+            "origin_id": 74,
+            "origin_slot": 0,
+            "target_id": 64,
+            "target_slot": 0,
+            "type": "AUDIO"
+          },
+          {
+            "id": 68,
+            "origin_id": 73,
+            "origin_slot": 0,
+            "target_id": 75,
+            "target_slot": 0,
+            "type": "OLLAMA_CONNECTIVITY"
+          },
+          {
+            "id": 70,
+            "origin_id": 64,
+            "origin_slot": 0,
+            "target_id": 77,
+            "target_slot": 0,
+            "type": "STRING"
+          },
+          {
+            "id": 71,
+            "origin_id": 80,
+            "origin_slot": 0,
+            "target_id": 78,
+            "target_slot": 0,
+            "type": "OLLAMA_CONNECTIVITY"
+          },
+          {
+            "id": 80,
+            "origin_id": 84,
+            "origin_slot": 0,
+            "target_id": 50,
+            "target_slot": 0,
+            "type": "QWEN3_MODEL"
+          },
+          {
+            "id": 82,
+            "origin_id": -10,
+            "origin_slot": 2,
+            "target_id": 68,
+            "target_slot": 0,
+            "type": "COMBO"
+          },
+          {
+            "id": 83,
+            "origin_id": -10,
+            "origin_slot": 3,
+            "target_id": 68,
+            "target_slot": 1,
+            "type": "COMBO"
+          },
+          {
+            "id": 84,
+            "origin_id": -10,
+            "origin_slot": 4,
+            "target_id": 68,
+            "target_slot": 2,
+            "type": "COMBO"
+          },
+          {
+            "id": 85,
+            "origin_id": -10,
+            "origin_slot": 5,
+            "target_id": 68,
+            "target_slot": 3,
+            "type": "COMBO"
+          },
+          {
+            "id": 86,
+            "origin_id": 68,
+            "origin_slot": 0,
+            "target_id": 63,
+            "target_slot": 0,
+            "type": "QWEN3_MODEL"
+          },
+          {
+            "id": 99,
+            "origin_id": -10,
+            "origin_slot": 1,
+            "target_id": 91,
+            "target_slot": 0,
+            "type": "AUDIO"
+          },
+          {
+            "id": 100,
+            "origin_id": -10,
+            "origin_slot": 0,
+            "target_id": 66,
+            "target_slot": 0,
+            "type": "AUDIO"
+          },
+          {
+            "id": 102,
+            "origin_id": 92,
+            "origin_slot": 0,
+            "target_id": 46,
+            "target_slot": 0,
+            "type": "AUDIO"
+          },
+          {
+            "id": 103,
+            "origin_id": 93,
+            "origin_slot": 0,
+            "target_id": 43,
+            "target_slot": 1,
+            "type": "AUDIO"
+          },
+          {
+            "id": 118,
+            "origin_id": 50,
+            "origin_slot": 0,
+            "target_id": 103,
+            "target_slot": 0,
+            "type": "AUDIO"
+          },
+          {
+            "id": 119,
+            "origin_id": 103,
+            "origin_slot": 0,
+            "target_id": -20,
+            "target_slot": 0,
+            "type": "*"
+          },
+          {
+            "id": 120,
+            "origin_id": 43,
+            "origin_slot": 0,
+            "target_id": 104,
+            "target_slot": 0,
+            "type": "QWEN3_PROMPT"
+          },
+          {
+            "id": 122,
+            "origin_id": 105,
+            "origin_slot": 0,
+            "target_id": 76,
+            "target_slot": 0,
+            "type": "STRING"
+          },
+          {
+            "id": 129,
+            "origin_id": 77,
+            "origin_slot": 0,
+            "target_id": 107,
+            "target_slot": 0,
+            "type": "STRING"
+          },
+          {
+            "id": 143,
+            "origin_id": -10,
+            "origin_slot": 6,
+            "target_id": 105,
+            "target_slot": 1,
+            "type": "STRING"
+          },
+          {
+            "id": 152,
+            "origin_id": 70,
+            "origin_slot": 0,
+            "target_id": 78,
+            "target_slot": 6,
+            "type": "STRING"
+          },
+          {
+            "id": 163,
+            "origin_id": 78,
+            "origin_slot": 0,
+            "target_id": 115,
+            "target_slot": 0,
+            "type": "STRING"
+          },
+          {
+            "id": 171,
+            "origin_id": -10,
+            "origin_slot": 7,
+            "target_id": 78,
+            "target_slot": 5,
+            "type": "STRING"
+          },
+          {
+            "id": 172,
+            "origin_id": -10,
+            "origin_slot": 8,
+            "target_id": 115,
+            "target_slot": 1,
+            "type": "STRING"
+          },
+          {
+            "id": 173,
+            "origin_id": -10,
+            "origin_slot": 9,
+            "target_id": 52,
+            "target_slot": 0,
+            "type": "STRING"
+          },
+          {
+            "id": 174,
+            "origin_id": 119,
+            "origin_slot": 0,
+            "target_id": 105,
+            "target_slot": 0,
+            "type": "STRING"
+          },
+          {
+            "id": 175,
+            "origin_id": 120,
+            "origin_slot": 0,
+            "target_id": 43,
+            "target_slot": 0,
+            "type": "QWEN3_MODEL"
+          }
+        ],
+        "extra": {
+          "workflowRendererVersion": "LG"
+        }
+      }
+    ]
+  },
+  "config": {},
+  "extra": {
+    "workflowRendererVersion": "LG",
+    "ds": {
+      "scale": 0.4665073802097337,
+      "offset": [
+        2839.3858637839135,
+        -2236.4657286070183
+      ]
+    },
+    "frontendVersion": "1.39.19",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}
